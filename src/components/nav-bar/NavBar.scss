@@ -1,0 +1,15 @@
+.nav-bar {
+  height: 60px;
+  background-color: #32373c;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  .home-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16;
+    line-height: 1.9rem;
+    text-decoration: none;
+  }
+}

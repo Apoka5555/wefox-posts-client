@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getAllPosts } from "../../api/api";
 import { Post } from "../../api/types";
 import { useModal } from "../../hooks/useModal";
@@ -47,7 +48,10 @@ export default function DataTable() {
           {posts.map((post) => (
             <tr key={post.id} className="table__body__row">
               <td className="table__body__row__cell">{post.id}</td>
-              <td className="table__body__row__cell">{post.title}</td>
+              <td className="table__body__row__cell">
+                {" "}
+                <Link to={`display-post/${post.id}`}>{post.title}</Link>
+              </td>
               <td className="table__body__row__cell">{post.content}</td>
               <td className="table__body__row__cell">{post.lat}</td>
               <td className="table__body__row__cell">{post.long}</td>
@@ -60,7 +64,9 @@ export default function DataTable() {
               </td>
               <td className="table__body__row__cell">
                 <div className="icon-container">
-                  <Icon icon="edit" onClick={() => {}} />
+                  <Link to={`edit-post/${post.id}`}>
+                    <Icon icon="edit" />
+                  </Link>
                   <Icon icon="delete" onClick={toggleModal} />
                   <DeleteConfirmationModal
                     isVisible={modalIsVisible}
