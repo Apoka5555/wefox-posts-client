@@ -1,0 +1,50 @@
+.table-container {
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0;
+
+    &__head {
+      &__row {
+        &__cell {
+          border: 1px solid #d9e2e9;
+          padding: 0.8rem;
+          white-space: pre-line;
+        }
+      }
+    }
+
+    &__body {
+      &__row {
+        &__cell {
+          border: 1px solid #d9e2e9;
+          padding: 0.8rem;
+
+          vertical-align: top;
+
+          &__img {
+            width: 100%;
+            max-width: 200px;
+          }
+
+          .icon-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            min-width: 20px;
+          }
+        }
+      }
+    }
+  }
+}
