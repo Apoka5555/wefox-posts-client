@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAllPosts } from "../../api/api";
 import { Post } from "../../api/types";
 import { useModal } from "../../hooks/useModal";
@@ -9,6 +9,8 @@ import Icon from "../icon/Icon";
 import "./DataTable.scss";
 
 export default function DataTable() {
+  const navigate = useNavigate();
+
   const [posts, setPosts] = useState<ReadonlyArray<Post>>([]);
 
   const { modalIsVisible, toggleModal } = useModal();
@@ -29,7 +31,12 @@ export default function DataTable() {
     <div className="table-container">
       <div className="button-container">
         <Button text="Refresh posts" onClick={() => {}} />
-        <Button text="Create new post" onClick={() => {}} />
+        <Button
+          text="Create new post"
+          onClick={() => {
+            navigate("/new-post");
+          }}
+        />
       </div>
 
       <table className="table">
@@ -50,7 +57,9 @@ export default function DataTable() {
               <td className="table__body__row__cell">{post.id}</td>
               <td className="table__body__row__cell">
                 {" "}
-                <Link to={`display-post/${post.id}`}>{post.title}</Link>
+                <Link to={`display-post/${post.id}`} className="post-title">
+                  {post.title}
+                </Link>
               </td>
               <td className="table__body__row__cell">{post.content}</td>
               <td className="table__body__row__cell">{post.lat}</td>

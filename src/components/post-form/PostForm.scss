@@ -1,0 +1,39 @@
+.form-wrapper {
+  padding: 0 20px;
+  padding-bottom: 33px;
+  padding-top: 26px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  form {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .form-field-wrapper {
+      margin-top: 30px;
+      width: 100%;
+
+      @media (min-width: 1280px) {
+        margin-top: 40px;
+      }
+    }
+
+    .submit-cta {
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 1280px) {
+        width: 310px;
+      }
+    }
+  }
+}

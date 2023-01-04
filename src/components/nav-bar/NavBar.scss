@@ -1,9 +1,29 @@
+@import "../../styles/variables";
+
 .nav-bar {
-  height: 60px;
-  background-color: #32373c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: $purple-4;
   display: flex;
   align-items: center;
   padding-left: 30px;
+  height: $header-height;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("../../assets/images/wavy-line.png");
+    background-size: contain;
+    background-repeat-y: no-repeat;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    left: 0;
+  }
 
   .home-link {
     color: #fff;

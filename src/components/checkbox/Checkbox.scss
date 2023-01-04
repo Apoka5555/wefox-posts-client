@@ -1,0 +1,57 @@
+.checkbox {
+  label {
+    display: flex;
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ .custom-checkbox [data-component="icon"] {
+    opacity: 1;
+  }
+
+  .custom-checkbox {
+    border-radius: 4px;
+    background: $light-purple;
+    color: $purple-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+
+    [data-component="icon"] {
+      height: 10px;
+      width: 14px;
+      opacity: 0;
+    }
+  }
+
+  .label-copy {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 10px;
+    flex: 1;
+    display: inline-block;
+    padding-top: 5px;
+  }
+
+  [data-component="rich-text"] p {
+    line-height: 1.4;
+  }
+
+  &.is-required {
+    [data-component="rich-text"] p {
+      position: relative;
+
+      &::after {
+        content: "*";
+        color: $gold-1;
+        margin-left: 5px;
+      }
+    }
+  }
+}
