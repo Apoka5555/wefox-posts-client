@@ -24,7 +24,7 @@
 
   label {
     font-weight: 400;
-    color: #fff;
+    color: $white;
   }
 
   .required-copy {
@@ -35,7 +35,7 @@
   }
 
   .field-wrapper {
-    border: 1px solid #fff;
+    border: 1px solid $white;
     background: $purple-4;
     margin-top: 10px;
     border-radius: 4px;
@@ -51,14 +51,14 @@
     background: $purple-4;
 
     &.is-limit-exceeded {
-      color: #e61d41;
+      color: $red;
     }
   }
 
   input {
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
+    color: $white;
     background: transparent;
     border: none;
     width: 100%;
@@ -84,9 +84,9 @@
 
   .error-message {
     display: none;
-    color: #fff;
+    color: $white;
     font-weight: 400;
-    background: #e61d41;
+    background: $red;
     padding: 7px 20px;
     width: calc(100% - 20px);
     margin: auto;
@@ -97,8 +97,8 @@
       display: inline-block;
       height: 18px;
       width: 18px;
-      background: #fff;
-      color: #e61d41;
+      background: $white;
+      color: $red;
       margin-right: 10px;
       text-align: center;
       border-radius: 50%;

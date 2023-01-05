@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+
+.display-post {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .post-info-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+
+    .post-info {
+      color: $white;
+
+      .field-info {
+        color: $white;
+        margin-top: 10px;
+
+        .field-label {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .field-value {
+          font-size: 14px;
+          font-weight: 600;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .post-info-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

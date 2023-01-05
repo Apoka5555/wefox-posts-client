@@ -16,6 +16,7 @@ interface InputFieldProps {
   isValid?: boolean;
   patternErrorMessage?: string;
   validationErrorType?: string;
+  value?: string;
   onChange?: (value: string) => void;
 }
 
@@ -33,6 +34,7 @@ const InputField: React.FC<InputFieldProps> = ({
   isValid,
   patternErrorMessage,
   validationErrorType,
+  value,
   onChange,
 }) => {
   const classes = classNames(
@@ -80,6 +82,7 @@ const InputField: React.FC<InputFieldProps> = ({
           type={type}
           id={id}
           name={name}
+          defaultValue={value}
           placeholder={placeholder}
           inputMode={type === "tel" ? "numeric" : "text"}
           onChange={handleOnChange}

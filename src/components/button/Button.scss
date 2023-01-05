@@ -1,15 +1,17 @@
+@import "../../styles/variables";
+
 .button {
   border-radius: 5px;
   height: 40px;
   font-weight: 600;
   font-size: 14px;
-  color: #fff;
-  background-color: #ef7f1a;
+  color: $white;
+  background-color: $orange-1;
   border: none;
   padding: 0.5rem 1.4rem;
   cursor: pointer;
 
   &:hover {
-    background-color: #dd6600;
+    background-color: $orange-2;
   }
 }

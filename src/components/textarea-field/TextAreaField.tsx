@@ -15,6 +15,7 @@ interface TextAreaFieldProps {
   isValid?: boolean;
   validationErrorType?: string;
   patternErrorMessage?: string;
+  value?: string;
   onChange?: (value: string) => void;
 }
 
@@ -31,6 +32,7 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({
   isValid,
   validationErrorType,
   patternErrorMessage,
+  value,
   onChange,
 }) => {
   const classes = classNames(
@@ -77,6 +79,7 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({
         <textarea
           id={id}
           name={name}
+          value={value}
           placeholder={placeholder}
           rows={rows}
           onChange={handleOnChange}
