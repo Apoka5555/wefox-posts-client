@@ -82,6 +82,7 @@ const InputField: React.FC<InputFieldProps> = ({
           type={type}
           id={id}
           name={name}
+          aria-label={name}
           defaultValue={value}
           placeholder={placeholder}
           inputMode={type === "tel" ? "numeric" : "text"}

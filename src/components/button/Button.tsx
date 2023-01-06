@@ -11,7 +11,11 @@ export default function Button(props: ButtonProps) {
   const { className, text, onClick } = props;
 
   return (
-    <button className={classNames("button", className)} onClick={onClick}>
+    <button
+      type="button"
+      className={classNames("button", className)}
+      onClick={onClick}
+    >
       {text}
     </button>
   );

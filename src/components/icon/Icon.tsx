@@ -7,15 +7,26 @@ interface IconProps {
   classNameValue?: string;
   icon: IconSet;
   onClick?: () => void;
+  tooltip?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ classNameValue, icon, onClick }) => {
+const Icon: React.FC<IconProps> = ({
+  classNameValue,
+  icon,
+  onClick,
+  tooltip,
+}) => {
   const classes = classNames("icon", classNameValue);
 
   const IconValue = iconDirectory[icon];
 
   return (
-    <span className={classes} data-component="icon" onClick={onClick}>
+    <span
+      className={classes}
+      data-component="icon"
+      onClick={onClick}
+      title={tooltip}
+    >
       <IconValue />
     </span>
   );

@@ -43,7 +43,7 @@ export default function DisplayPost(): ReactElement {
           </div>
         </div>
         <div className="post-info-img">
-          <img src={postInfo?.image_url} alt="" />
+          <img src={postInfo?.image_url} alt={postInfo?.title} />
         </div>
       </div>
     </div>
