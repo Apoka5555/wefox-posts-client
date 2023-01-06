@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import PostForm from "../../components/post-form/PostForm";
+import PostForm from "../../components/organisms/post-form/PostForm";
 import "./AddPost.scss";
 
 export default function AddPost(): ReactElement {

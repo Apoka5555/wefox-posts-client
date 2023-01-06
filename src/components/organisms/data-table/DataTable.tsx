@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { deletePost, getAllPosts } from "../../api/api";
-import { Post } from "../../api/types";
-import { useModal } from "../../hooks/useModal";
-import Button from "../button/Button";
+import { deletePost, getAllPosts } from "../../../api/api";
+import { Post } from "../../../api/types";
+import { useModal } from "../../../hooks/useModal";
+import Button from "../../atoms/button/Button";
 import DeleteConfirmationModal from "../delete-confirmation-modal/delete-confirmation-modal";
-import Icon from "../icon/Icon";
+import Icon from "../../atoms/icon/Icon";
 import "./DataTable.scss";
 
 export default function DataTable() {

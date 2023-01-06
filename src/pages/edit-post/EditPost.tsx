@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { useParams } from "react-router-dom";
-import PostForm from "../../components/post-form/PostForm";
+import PostForm from "../../components/organisms/post-form/PostForm";
 
 export default function EditPost(): ReactElement {
   const { id } = useParams();

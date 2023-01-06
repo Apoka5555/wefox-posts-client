@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { createPost, editPost, showPost } from "../../api/api";
-import { CreatePost, Post } from "../../api/types";
-import Button from "../button/Button";
-import InputField from "../input-field/InputField";
-import TextAreaField from "../textarea-field/TextAreaField";
+import { createPost, editPost, showPost } from "../../../api/api";
+import { CreatePost, Post } from "../../../api/types";
+import Button from "../../atoms/button/Button";
+import InputField from "../../molecules/input-field/InputField";
+import TextAreaField from "../../molecules/textarea-field/TextAreaField";
 import "./PostForm.scss";
 
 interface FormValues {

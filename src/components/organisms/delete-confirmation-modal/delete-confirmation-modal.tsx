@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import Overlay from "../overlay/overlay";
-import Button from "../button/Button";
+import Overlay from "../../atoms/overlay/overlay";
+import Button from "../../atoms/button/Button";
 import "./delete-confirmation-modal.scss";
 
 interface DeleteConfirmationModalProps {
